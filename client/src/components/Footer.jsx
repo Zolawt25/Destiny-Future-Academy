@@ -12,7 +12,7 @@ const Footer = () => {
             <div className='flex flex-col'>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Links</h4>
                 <a href="/blog" className='text-sm font-semibold hover:text-blue-500 hover:border-b-2 border-blue-500 mt-2'>Blog</a>
-                <a href="/acadamics" className='text-sm font-semibold hover:text-blue-500 hover:border-b-2 border-blue-500 mt-2'>Acadamics</a>
+                <a href="/academics" className='text-sm font-semibold hover:text-blue-500 hover:border-b-2 border-blue-500 mt-2'>Academics</a>
                 <a href="/gallery" className='text-sm font-semibold hover:text-blue-500 hover:border-b-2 border-blue-500 mt-2'>Gallery</a>
             </div>
             <div>
