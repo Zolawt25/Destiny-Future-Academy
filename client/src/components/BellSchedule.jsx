@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { schedule } from '../assets/schedule'
 
 
 
@@ -7,91 +8,65 @@ import React from 'react'
 
 
 const BellSchedule = () => {
-  return (
-    <div>
-      <h2 className='text-center font-bold text-3xl text-gray-900 mb-12'>Our Bell Schedule</h2>
-      <div className='flex justify-center'>
-        <table className='text-center border-2 w-[70%] even:bg-black [&>*:nth-child(odd)]:bg-blue-100 [&>*:nth-child(even)]:bg-gray-50 text-gray-900 text-sm'>
+    const [scheduleApi, setScheduleApi] = useState(schedule.nursery)
+    const [schedules, setSchedules] = useState("nursery")
 
-            <tr className=''>
-                <th>Bell</th>
-                <th>Local Time</th>
-                <th>Schedule</th>
-            </tr>
-            <tr>
-                <td>First Bell</td>
-                <td>1:00 LT</td>
-                <td>School Gates Open</td>
-            </tr>
-            <tr>
-                <td>Second Bell</td>
-                <td>1:45 LT</td>
-                <td>Teachers Sign in</td>
-            </tr>
-            <tr>
-                <td>Assembly Bell</td>
-                <td>2:00 LT</td>
-                <td>School Gates Close</td>
-            </tr>
-            <tr>
-                <td>Assembly End</td>
-                <td>2:30 LT</td>
-                <td>Students to their Classes</td>
-            </tr>
-            <tr>
-                <td>1st Period</td>
-                <td>3:15 LT</td>
-                <td>End of 1st Period</td>
-            </tr>
-            <tr>
-                <td>2nd Period</td>
-                <td>3:50 LT</td>
-                <td>End of 2nd Period</td>
-            </tr>
-            <tr>
-                <td>3rd Period</td>
-                <td>4:25 LT</td>
-                <td>End of 3rd Period</td>
-            </tr>
-            <tr>
-                <td>Break</td>
-                <td>4:45 LT</td>
-                <td>End of Break</td>
-            </tr>
-            <tr>
-                <td>4th Period</td>
-                <td>5:25 LT</td>
-                <td>End of 4th Period</td>
-            </tr>
-            <tr>
-                <td>5th Period</td>
-                <td>6:00 LT</td>
-                <td>End of 5th Period</td>
-            </tr>
-            <tr>
-                <td>Lunch Break</td>
-                <td>7:20 LT</td>
-                <td>End of Lunch Break</td>
-            </tr>
-            <tr>
-                <td>6th Period</td>
-                <td>8:00 LT</td>
-                <td>End of 6th Period</td>
-            </tr>
-            <tr>
-                <td>7th Period</td>
-                <td>8:35 LT</td>
-                <td>End of 7th Period</td>
-            </tr>
-            <tr>
-                <td>End of School Day</td>
-                <td>9:05 LT</td>
-                <td>End of 8th Period</td>
-            </tr>
-        </table>
-      </div>
-    </div>
-  )
+    useEffect(()=>{
+        if(schedules === "nursery"){
+            setScheduleApi(schedule.nursery)
+        }else if(schedules === "grade_1_to_4"){
+            setScheduleApi(schedule.grade_1_to_4)
+        }else{
+            setScheduleApi(schedule.grade_5_to_8)
+        }
+    },[schedules])
+    return (
+        <div className='flex justify-center'>
+                <div className='max-w-[1400px] w-full'>
+                <h2 className='text-center font-bold text-3xl text-gray-900 mb-12'>Our Bell Schedule</h2>
+                <div className='flex justify-center flex-col items-center'>
+                    <div className='w-full md:w-[85%] lg:w-[70%] mb-4 pl-5 md:pl-0'>
+                        <p className='mb-1 font-bold text-gray-900'>Greads:</p>
+                        <select onChange={(e)=>setSchedules(e.target.value)} className='w-[200px] py-1 px-1 outline-none text-gray-600 font-semibold border-2 rounded-lg'>
+                            <option value="nursery">Nursery</option>
+                            <option value="grade_1_to_4">Greade 1 to 4</option>
+                            <option value="grade_5_to_8">Greade 5 to 8</option>
+                        </select>
+                    </div>
+                    <div className='px-5 md:px-0 mt-3 w-full md:w-[85%] lg:w-[70%] overflow-x-scroll max-w-[1400px]'>
+                        <table className='text-center border-2 [&>*:nth-child(odd)]:bg-[#F96106] [&>*:nth-child(even)]:bg-orange-100 text-gray-900 text-sm w-full min-w-[650px]'>
+                            <tr className=''>
+                                <th>Bell</th>
+                                <th>Local Time</th>
+                                <th>Schedule</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                            {
+                                scheduleApi.bell.map((item, index)=>{
+                                    return <tr key={index}>
+                                        <td>{item}</td>
+                                        <td>{scheduleApi.localTime[index]}</td>
+                                        <td>{scheduleApi.Schedule[index]}</td>
+                                        <td>{scheduleApi.monday[index]}</td>
+                                        <td>{scheduleApi.thursday[index]}</td>
+                                        <td>{scheduleApi.wednesday[index]}</td>
+                                        <td>{scheduleApi.thursday[index]}</td>
+                                        <td>{scheduleApi.friday[index]}</td>
+                                    </tr>
+                                })
+                            }
+                        </table>
+                    </div>
+                    
+                </div>
+                </div>
+        </div>
+        
+    )
 }
 
 export default BellSchedule

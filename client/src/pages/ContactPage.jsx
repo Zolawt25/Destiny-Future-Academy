@@ -11,7 +11,7 @@ const ContactPage = () => {
   return (
     <div>
       <div className='bg-[image:url(/imgs/banner.png)] bg-cover bg-[#111111a4] bg-blend-darken bg-center py-12'>
-        <h1 className='text-center text-gray-200 text-5xl sm:text-6xl font-semibold mb-3'>#ContactUS</h1>
+        <h1 className='text-center text-gray-200 text-4xl sm:text-6xl font-semibold mb-3'>#ContactUS</h1>
         <p className='text-center text-gray-200 text-[14px] sm:text-lg font-semibold'>Extra activities are also important for overall developments of students…</p>
       </div>
       <br /><br />

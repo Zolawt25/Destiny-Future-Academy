@@ -14,11 +14,11 @@ const AcademicsPage = () => {
   return (
     <div>
       <div className='bg-[image:url(/imgs/banner.png)] bg-cover bg-[#111111a4] bg-blend-darken bg-center py-12'>
-        <h1 className='text-center text-gray-200 text-6xl font-semibold mb-3'>#Academics</h1>
-        <p className='text-center text-gray-200 text-lg font-semibold'>Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
+        <h1 className='text-center text-gray-200 text-5xl sm:text-6xl font-semibold mb-3'>#Academics</h1>
+        <p className='text-center text-gray-200 text-[14px] sm:text-lg font-semibold'>Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
       </div>
       <br /><br />
-      <div className='px-20'>
+      {/* <div className='px-20'>
         <h2 className='text-center font-bold text-3xl text-gray-900 mb-9'>Curriculum Details</h2>
         <div className='flex items-center text-right'> 
             <div>
@@ -30,7 +30,7 @@ const AcademicsPage = () => {
             </div>
         </div>
       </div>
-      <br /><br />
+      <br /><br /> */}
       <div>
         <BellSchedule/>
       </div>
