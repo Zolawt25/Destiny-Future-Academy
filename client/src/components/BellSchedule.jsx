@@ -34,7 +34,7 @@ const BellSchedule = () => {
                         </select>
                     </div>
                     <div className='px-5 md:px-0 mt-3 w-full md:w-[85%] lg:w-[70%] overflow-x-scroll max-w-[1400px]'>
-                        <table className='text-center border-2 [&>*:nth-child(odd)]:bg-[#F96106] [&>*:nth-child(even)]:bg-orange-100 text-gray-900 text-sm w-full min-w-[650px]'>
+                        <table className='text-center border-2 [&>*:nth-child(odd)]:text-gray-200 [&>*:nth-child(odd)]:bg-[#F96106] [&>*:nth-child(even)]:bg-orange-100 text-gray-900 text-sm w-full min-w-[650px]'>
                             <tr className=''>
                                 <th>Bell</th>
                                 <th>Local Time</th>
