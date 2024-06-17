@@ -13,6 +13,7 @@ const NewsAndEvents = () => {
         const fetchData = async ()=>{
             const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/news/`)
             setNewsApi(res.data)
+            console.log(res.data)
         }
         fetchData()
     },[])
