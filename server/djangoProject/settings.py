@@ -63,6 +63,7 @@ MIDDLEWARE = [
 
 #corsheaders
 CORS_ALLOWED_ORIGINS = (
+"https://destiny-future-academy.vercel.app",
 "http://127.0.0.1:5173",
 "http://localhost:3000",
 "http://localhost:8000",
@@ -70,7 +71,7 @@ CORS_ALLOWED_ORIGINS = (
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:5173","http://localhost:3000"]
+# CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:5173","http://localhost:3000"]
 
 ROOT_URLCONF = "djangoProject.urls"
 
