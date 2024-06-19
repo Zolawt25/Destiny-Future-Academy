@@ -26,11 +26,11 @@ const BellSchedule = () => {
                 <h2 className='text-center font-bold text-3xl text-gray-900 mb-12'>Our Bell Schedule</h2>
                 <div className='flex justify-center flex-col items-center'>
                     <div className='w-full md:w-[85%] lg:w-[70%] mb-4 pl-5 md:pl-0'>
-                        <p className='mb-1 font-bold text-gray-900'>Greads:</p>
+                        <p className='mb-1 font-bold text-gray-900'>Grads:</p>
                         <select onChange={(e)=>setSchedules(e.target.value)} className='w-[200px] py-1 px-1 outline-none text-gray-600 font-semibold border-2 rounded-lg'>
                             <option value="nursery">Nursery</option>
-                            <option value="grade_1_to_4">Greade 1 to 4</option>
-                            <option value="grade_5_to_8">Greade 5 to 8</option>
+                            <option value="grade_1_to_4">Grade 1 to 4</option>
+                            <option value="grade_5_to_8">Grade 5 to 8</option>
                         </select>
                     </div>
                     <div className='px-5 md:px-0 mt-3 w-full md:w-[85%] lg:w-[70%] overflow-x-scroll max-w-[1400px]'>
