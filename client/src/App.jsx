@@ -6,6 +6,8 @@ import AcademicsPage from './pages/AcademicsPage';
 import GalleryPage from './pages/GalleryPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import SpecialProgramPage from './pages/SpecialProgramPage';
+import LibraryPage from './pages/LibraryPage';
 
 
 
@@ -24,6 +26,8 @@ const App = () => {
           <Route path='/gallery' element={<GalleryPage/>}/>
           <Route path='/about' element={<AboutPage/>}/>
           <Route path='/contact' element={<ContactPage/>}/>
+          <Route path='/library' element={<LibraryPage/>}/>
+          <Route path='/special' element={<SpecialProgramPage/>}/>
         </Routes>
       </Router>
     </div>

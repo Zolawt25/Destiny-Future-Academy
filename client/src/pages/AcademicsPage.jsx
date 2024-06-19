@@ -3,6 +3,7 @@ import BellSchedule from '../components/BellSchedule'
 import Library from '../components/Library'
 import SpecialProgram from '../components/SpecialProgram'
 import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 
 
@@ -18,29 +19,30 @@ const AcademicsPage = () => {
         <p className='text-center text-gray-200 text-[14px] sm:text-lg font-semibold'>Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
       </div>
       <br /><br />
-      {/* <div className='px-20'>
-        <h2 className='text-center font-bold text-3xl text-gray-900 mb-9'>Curriculum Details</h2>
-        <div className='flex items-center text-right'> 
-            <div>
-                <h3 className='text-3xl font-semibold text-gray-900'>SCHOOL CURRICULUM</h3> 
-                <p className='ml-10'>The new curriculum has been implemented from 1st to 8th grade in our academy since the start of the new academic year 2015 EC.</p> 
-            </div>
-            <div>
-                <img src="/imgs/curriculum.jpg" alt="" />
-            </div>
-        </div>
-      </div>
-      <br /><br /> */}
       <div>
         <BellSchedule/>
       </div>
       <br /><br />
-      <div>
-        <Library/>
-      </div>
-      <br /><br />
-      <div>
-        <SpecialProgram/>
+      <div className='flex justify-center'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 px-7 sm:px-28 md:px-16 lg:px-32 max-w-[1400px] w-full'>
+          <Link to="/library" className=' bg-gray-50 hover:scale-105 duration-100 shadow-lg'>
+                <div className='overflow-hidden rounded shadow-lg'>
+                    <img src="/imgs/library.png" alt="" className='aspect-[2/1] w-full'/>
+                </div>
+                <div className='px-4 py-3'>
+                    <h2 className='text-2xl sm:text-3xl font-semibold text-gray-900 py-1'>Our Library and Resources</h2>
+                </div>
+                
+            </Link>
+            <Link to="/special" className=' bg-gray-50 hover:scale-105 duration-100 shadow-lg'>
+                <div className='overflow-hidden rounded shadow-lg'>
+                    <img src="/imgs/special_kids.png" alt="" className='aspect-[2/1] w-full'/>
+                </div>
+                <div className='px-4 py-3'>
+                    <h2 className='text-2xl sm:text-3xl font-semibold text-gray-900 py-1'>Our Special Academic Programs</h2>
+                </div>
+            </Link>
+          </div>
       </div>
       <br/><br />
       <hr />

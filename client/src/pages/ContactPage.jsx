@@ -24,10 +24,10 @@ const ContactPage = () => {
                     <p>Midway, Gofa to German Square, Addis Ababa, Ethiopia</p>
                     <br />
                     <b>Email:</b>
-                    <p>zelalemt538@gmail.com</p>
+                    <p>info@destinyfuture.com</p>
                     <br />
                     <b>Phone:</b>
-                    <p>+251 909 242 510</p>
+                    <p>+251 118 39 16 28</p>
                 </div>   
             </div>
             <div className='flex-1'>

@@ -22,9 +22,9 @@ const Footer = () => {
                     <p className='text-sm'>Midway, Gofa to German Square,</p>
                     <p className='text-sm'>Addis Ababa, Ethiopia</p>
                     <p className='font-bold text-gray-50'>Phone</p>
-                    <p className='text-sm'>+251 909 242 510</p>
+                    <p className='text-sm'>+251 118 39 16 28</p>
                     <p className='font-bold text-gray-50'>Email</p>
-                    <p className='text-sm'>zelalemt538@gmail.com</p>
+                    <p className='text-sm'>info@destinyfuture.com</p>
                 </div>
             </div>
             <hr />

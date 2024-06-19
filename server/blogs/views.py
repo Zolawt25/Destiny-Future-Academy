@@ -11,3 +11,7 @@ from .serializers import BlogSerializer
 class BlogApiView(generics.ListCreateAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
+    
+class DetailedBlogApiView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer

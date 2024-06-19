@@ -9,7 +9,7 @@ import React, { useState } from 'react'
 const NavBar = () => {
   const [responsiveNav, setResponsiveNav] = useState(false)
   return ( 
-    <div className='sticky top-0 flex justify-center bg-[#F96106]'>
+    <div className='sticky top-0 flex justify-center bg-[#F96106] z-50'>
       <div className={`flex items-center justify-between py-2 md:px-20 px-10 shadow-md relative ${!responsiveNav&&"overflow-hidden"} max-w-[1400px] w-full`}>
         <a href="/"><img src="/imgs/logo.png" alt="" className='w-[60px]'/></a>
         <div className={`absolute md:relative top-0 h-screen md:h-auto z-50 bg-[#F96106] md:bg-transparent ${responsiveNav ? "right-0" : "right-[-3000px] md:right-0"} flex flex-col md:flex-row w-[270px] md:w-auto items-center justify-center text-lg md:text-[15px] duration-300 text-gray-50`}>

@@ -11,3 +11,7 @@ from .serializers import NewsSerializer
 class NewsApiView(generics.ListCreateAPIView):
     queryset = News.objects.all()
     serializer_class = NewsSerializer
+    
+class DetailedNewsApiView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer
