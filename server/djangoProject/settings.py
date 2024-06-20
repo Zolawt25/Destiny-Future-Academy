@@ -107,8 +107,16 @@ WSGI_APPLICATION = "djangoProject.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL") # new
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'Q1zqTpAji3FV',
+        'HOST': 'ep-steep-meadow-a492wdxd-pooler.us-east-1.aws.neon.tech',
+        'PORT': '5432',
+    }
 }
+# print(env.dj_db_url("DATABASE_URL"))
 
 
 # Password validation
